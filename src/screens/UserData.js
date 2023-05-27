@@ -65,12 +65,15 @@ const showUserData =({item})=>
   useEffect(()=>{getUserData()},[])
 
   return (
-    <View>
+    <View style={styles.flatlistStyle}>
       <Text style={styles.mainHeader}>List of Student</Text>
         <FlatList
+      
+        
         keyExtractor={(item)=>item.id}
           data={myData}
-          horizontal 
+         //horizontal
+         showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
           renderItem={showUserData}
         />
@@ -88,7 +91,10 @@ const styles = StyleSheet.create({
     width:"100%",
     height:200,
     paddingVertical:50,
-    backgroundColor:"#ebebeb"
+    backgroundColor:"#ebebeb",
+  },
+  flatlistStyle:{
+    alignItems:'center'
   },
   card:
   {

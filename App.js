@@ -7,6 +7,7 @@ import Contact from './src/screens/Contact';
 import UserData from './src/screens/UserData';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CourseDetails from './src/screens/CourseDetails';
 
 export default function App() {
   
@@ -57,6 +58,12 @@ const Stack = createNativeStackNavigator();
         options={{headerTitleStyle:{
           fontSize:20,
         },headerTitle:"Student's Data",headerTitleAlign:'center'}} />
+
+        {/*CourseDetails*/}
+        <Stack.Screen name='CourseDetails' component={CourseDetails} 
+        options={{headerTitleStyle:{
+          fontSize:20,
+        },headerTitle:"Course Detail ",headerTitleAlign:'center'}} />
 
       </Stack.Navigator>
     </NavigationContainer>
